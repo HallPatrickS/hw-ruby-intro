@@ -13,29 +13,15 @@ def max_2_sum arr
   elsif arr.length == 1
     return arr[0]
   end
-
-  if arr[0] > arr[1]
-    max = arr[0]
-    second_max = arr[1]
-  else
-    second_max= arr[0]
-    max = arr[1]
-  end
-
-  for i in arr do
-    next if (i == 0 or i == 1)
-    if i >= max
-      second_max = max
-      max = i
-    elsif i >= second_max
-      second_max = i
-    end
-  end
-  return max + second_max
+  other = arr.sort
+  return other[other.length-1] + other[other.length-2]
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.length < 2
+    return false
+  end
+  arr.sort
 end
 
 # Part 2
