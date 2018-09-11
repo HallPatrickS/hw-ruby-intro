@@ -21,7 +21,19 @@ def sum_to_n? arr, n
   if arr.length < 2
     return false
   end
-  arr.sort
+  arr = arr.sort
+  l = 0
+  r = arr.length-1
+  while l < r
+    if arr[l] + arr[r] == n
+      return true
+    elsif arr[l] + arr[r] < n
+      l += 1
+    elsif
+      r -= 1
+    end
+  end
+  return false
 end
 
 # Part 2
