@@ -4,7 +4,6 @@
 
 def sum arr
   return arr.inject(0){|sum,x| sum + x }
-  # YOUR CODE HERE
 end
 
 def max_2_sum arr
@@ -43,6 +42,7 @@ def hello(name)
 end
 
 def starts_with_consonant? s
+  return /^[^AEIOUaeiou\W]/s.match(s) != nil
 end
 
 def binary_multiple_of_4? s
