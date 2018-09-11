@@ -3,10 +3,14 @@
 # Part 1
 
 def sum arr
+  return arr.inject(0){|sum,x| sum + x }
   # YOUR CODE HERE
 end
 
 def max_2_sum arr
+  max = arr.max
+  arr.delete(max)
+  return max + arr.max
   # YOUR CODE HERE
 end
 
