@@ -7,19 +7,14 @@ def sum arr
 end
 
 def max_2_sum arr
-  if arr.length == 0
-    return 0
-  elsif arr.length == 1
-    return arr[0]
-  end
+  return 0 if arr.length == 0
+  return arr[0] if arr.length == 1
   other = arr.sort
   return other[other.length-1] + other[other.length-2]
 end
 
 def sum_to_n? arr, n
-  if arr.length < 2
-    return false
-  end
+  return false if arr.length < 2
   arr = arr.sort
   l = 0
   r = arr.length-1
@@ -64,6 +59,6 @@ class BookInStock
 	end
 
 	def price_as_string
-		format('$%.2f', price)	
+		format('$%.2f', @price)	
 	end	
 end		
